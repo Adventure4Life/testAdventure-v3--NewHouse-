@@ -1,0 +1,7 @@
+//--Single_Word_Command: map
+
+//Synonyms-START
+chart
+plan
+level
+//Synonyms-END

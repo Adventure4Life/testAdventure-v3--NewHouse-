@@ -1,0 +1,9 @@
+//--Single_Word_Command: north
+
+//Synonyms-START
+northward
+northwardly
+n
+forward
+up
+//Synonyms-END

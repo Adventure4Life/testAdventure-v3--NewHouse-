@@ -1,0 +1,26 @@
+//--Base: box
+
+//Synonyms-START
+bin
+caddy
+caisson
+canister
+canteen
+carton
+case
+casket
+chest
+coffer
+container
+crate
+holder
+locker
+package
+receptacle
+repository
+reservatory
+safe
+trunk
+vault
+vessel
+//Synonyms-END

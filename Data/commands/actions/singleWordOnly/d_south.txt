@@ -1,0 +1,10 @@
+//--Single_Word_Command: south
+
+//Synonyms-START
+southward
+southwardly
+s
+backward
+back
+down
+//Synonyms-END

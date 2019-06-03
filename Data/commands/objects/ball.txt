@@ -1,0 +1,19 @@
+//--Base: ball
+
+//Synonyms-START
+bead
+drop
+droplet
+egg
+globe
+globule
+orb
+ovoid
+pellet
+pill
+rondure
+round
+sphere
+spheroid
+spherule
+//Synonyms-END

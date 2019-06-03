@@ -1,0 +1,15 @@
+//--ITEM_NAME: Silver Ball
+//--ITEM_CAN_BE_PICKED_UP: false
+
+//--ROOM_DESCRIPTION_DEFAULT: <room descritpion default>
+
+//--GET_ITEM_FAILED: <get failed text>
+
+//--NOUN-START
+ball
+//--NOUN-END
+
+//--VERB-START
+get
+kick
+//--VERB-END

@@ -1,0 +1,7 @@
+d:\Projects\GameDev\testAdventure-v3-(NewHouse)\bin\Debug\testAdventure v3 (NewHouse).exe.config
+d:\Projects\GameDev\testAdventure-v3-(NewHouse)\bin\Debug\testAdventure v3 (NewHouse).exe
+d:\Projects\GameDev\testAdventure-v3-(NewHouse)\bin\Debug\testAdventure v3 (NewHouse).pdb
+d:\Projects\GameDev\testAdventure-v3-(NewHouse)\obj\Debug\testAdventure v3 (NewHouse).csprojAssemblyReference.cache
+d:\Projects\GameDev\testAdventure-v3-(NewHouse)\obj\Debug\testAdventure v3 (NewHouse).csproj.CoreCompileInputs.cache
+d:\Projects\GameDev\testAdventure-v3-(NewHouse)\obj\Debug\testAdventure v3 (NewHouse).exe
+d:\Projects\GameDev\testAdventure-v3-(NewHouse)\obj\Debug\testAdventure v3 (NewHouse).pdb

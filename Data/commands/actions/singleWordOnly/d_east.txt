@@ -1,0 +1,8 @@
+//--Single_Word_Command: east
+
+//Synonyms-START
+eastward
+eastwardly
+e
+right
+//Synonyms-END

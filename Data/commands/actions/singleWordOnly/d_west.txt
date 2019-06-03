@@ -1,0 +1,8 @@
+//--Single_Word_Command: west
+
+//Synonyms-START
+westward
+westwardly
+w
+left
+//Synonyms-END

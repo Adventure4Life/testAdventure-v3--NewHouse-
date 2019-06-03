@@ -1,0 +1,18 @@
+//--Single_Word_Command: inventory
+
+//Synonyms-START
+inv
+backpack
+bag
+carryall
+handbag
+haversack
+holdall
+knapsack
+pack
+pouch
+rucksack
+sack
+satchel
+suitcase
+//Synonyms-END
