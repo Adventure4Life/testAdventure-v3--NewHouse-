@@ -31,6 +31,16 @@ namespace testAdventure
             rawInput = Regex.Replace(input, @"\s+", " "); //make sure there is only 1 white space between each word.
             cleanedInputTokens = TextUtils.TokenizeStringList(rawInput);
             stemmedInputTokens = TextUtils.StemWordList(cleanedInputTokens);
+            #region DEBUGGING PRINTOUTS of Variables.
+            /*
+            Console.WriteLine("UserInput.GetInput()");
+            Console.WriteLine("rawInput : " + rawInput);
+            foreach (string word in cleanedInputTokens)
+                Console.WriteLine("cleanedInputTokens : " + word);
+            foreach (string word in stemmedInputTokens)
+                Console.WriteLine("stemmedInputTokens : " + word);
+            */
+            #endregion
 
             ProcessCommands CmdProcessor = new ProcessCommands();
             CmdProcessor.ProcessInputData();

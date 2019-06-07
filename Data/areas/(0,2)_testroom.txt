@@ -1,0 +1,29 @@
+//--AREA_NAME: <Area 0,2>
+
+//--AREA_LOOK: <Look Area 0,2 Description>
+
+//--AREA_CINAMATIC_START:
+<Cinimatic 0,2>
+//--AREA_CINAMATIC_END:
+
+//LIST_OF_ITEMS_IN_AREA--START
+SilverBall
+RedBox
+//LIST_OF_ITEMS_IN_AREA--END
+
+
+//-EXIT_START
+--NAME: Exit2
+--DIRECTION: south
+--IS_OPEN: true
+--LOOK_AT_OPEN: look exit SOUTH open
+--LOOK_AT_CLOSED: Looks at open
+//-EXIT_END
+
+//-EXIT_START
+--NAME: Exit4
+--DIRECTION: west
+--IS_OPEN: true
+--LOOK_AT_OPEN: look exit WEST open
+--LOOK_AT_CLOSED: Looks at open
+//-EXIT_END

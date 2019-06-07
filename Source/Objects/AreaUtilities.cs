@@ -11,19 +11,18 @@ namespace testAdventure
         public static void ActivateArea(Area area)
         {
             //Console.WriteLine(area.Name());
-            /*
-
-            switch (area.sCinamaticHasPlayed)
+            switch (Player.AreaEntered())
             {
                 case false:
                     {
-                        area.sCinamaticHasPlayed = true;
+                        Player.SetAreaEntered(); // Set Bool Value so app knows we have been here before
+                        FrameBuffer.ClearType();
                         FrameBuffer.type = area.Cinamatic();
                         PrintBuffer.PrintType();
                         break; }
                 case true:
                     { break; }
-            }*/
+            }
         }
     }
 }

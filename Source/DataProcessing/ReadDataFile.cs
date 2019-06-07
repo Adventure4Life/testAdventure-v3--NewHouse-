@@ -26,7 +26,7 @@ namespace testAdventure
             {
                 //if (line != "")
                 //{
-                    ReadData_rawAll.Add(line);
+                ReadData_rawAll.Add(line);
                 //}
             }
             fileData = ReadData_rawAll.ToList();
@@ -65,7 +65,7 @@ namespace testAdventure
             }
             return line.Trim();
         }
-        
+
         // This finds the index value for the start and the end of any unique Brackets.
         public static int[] FindUniqueBrackets(string start, string end, List<string> fileData)
         {
@@ -77,13 +77,13 @@ namespace testAdventure
             }
             return found;
         }
-        
+
         // Reads full line data between index values of the Brackets
-        public static List<string> Read_Cinamatic (int start, int end, List<string> fileData)
+        public static List<string> Read_Cinamatic(int start, int end, List<string> fileData)
         {
             List<string> data = new List<string>();
 
-            for (int i = start+1; i < end; i++)
+            for (int i = start + 1; i < end; i++)
             {
                 data.Add(fileData[i].Trim());
             }
@@ -107,6 +107,7 @@ namespace testAdventure
             {
                 if (fileData[i].StartsWith(uniqueKeyword))
                 {
+                    //Console.WriteLine("DEBUG uniqueKeyword : " + uniqueKeyword);
                     string foundLine = cleanCatagorieTxT(fileData[i], uniqueKeyword);
                     return foundLine;
                 }

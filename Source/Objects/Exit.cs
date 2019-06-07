@@ -9,9 +9,11 @@ namespace testAdventure
     class Exit
     {
         public string name { get; set; } = "";
-        public bool open { get; set; } = true;
-        public string look_area_open { get; set; } = "";
-        public string look_at_open { get; set; } = "";
+        public string direction { get; set; } = "";
+        public bool avaliable { get; set; } = false;
+        public bool open { get; set; } = false;
+        public string look_at_exit { get; set; } = "";
+        public string move_Through_exit { get; set; } = "";
 
         public void SetOpenClosed()
         {

@@ -11,37 +11,76 @@ namespace testAdventure
         private static string rawInput;
         private static string[] cleanedInputTokens;
         private static string[] stemmedInputTokens;
-        private Dictionary<string, string> activeCommands;
-        //private Dictionary<string, string> activeNouns;
+
 
         public ProcessCommands()
         {
             rawInput = UserInput.GetRawInput();
             cleanedInputTokens = UserInput.GetCleanedInputTokens().Clone() as string[];
             stemmedInputTokens = UserInput.GetStemmedInputTokens().Clone() as string[];
-            //activeCommands = new Dictionary<string, string>(CommandDictonary.GetCommandList());
+            #region DEBUGGING PRINTOUTS of Variables.
+            /*
+            Console.WriteLine("ProcessCommands Constructor");
+            Console.WriteLine("rawInput : " + rawInput);
+            foreach (string word in cleanedInputTokens)
+                Console.WriteLine("cleanedInputTokens : " + word);
+            foreach (string word in stemmedInputTokens)
+                Console.WriteLine("stemmedInputTokens : " + word);
+            */
+            //ProcessInputData(); // Moved to UserInputs.GetInput()
+            //examine
+            //Console.WriteLine("DEBUG 'examine': "+ CommandDictonary.actionsConstant["examine"]);
+            //string Stemmed = TextUtils.StemWord.Stem("examine").Value;
+            //Console.WriteLine("Stemmed Command : "+Stemmed);
+            #endregion
         }
 
         public void ProcessInputData()
         {
             if (stemmedInputTokens.Length == 1)
             {
+                //Console.WriteLine("ProcessCommands Constructor");
+                //Console.WriteLine("SingleWord : "+ stemmedInputTokens[0]);
                 SingleWordActivations(stemmedInputTokens[0]);
             }
         }
 
         private void SingleWordActivations(string cmd)
         {
-            if (activeCommands.ContainsKey(cmd))
+            #region DEBUGGING Printouts
+            /*
+            foreach (KeyValuePair<string, string> item in CommandDictonary.actionsSingle)
             {
-                //Console.WriteLine(word + " : " + activeCommands[word]);
-                SingleCommands ProcessSingleCommand = new SingleCommands(activeCommands[cmd]);
+                Console.WriteLine("{0} : {1}", item.Key, item.Value);
+            }
+            
+            foreach (KeyValuePair<string, string> item in CommandDictonary.actionsConstant)
+            {
+                Console.WriteLine("{0} : {1}", item.Key, item.Value);
+            }
+            */
+            #endregion
+            if (CommandDictonary.actionsSingle.ContainsKey(cmd))
+            {
+                #region DEBUGGING Printouts
+                /*
+                Console.WriteLine();
+                Console.WriteLine("Dose the command exist in the CONSTANT command list?");
+                Console.WriteLine("CMD (to send) : " + cmd);
+                Console.WriteLine(cmd + " : " + CommandDictonary.actionsSingle[cmd]);
+                */
+                #endregion
+                SingleCommands ProcessSingleCommand = new SingleCommands(CommandDictonary.actionsSingle[cmd]);
             }
         }
     }
 }
 
 /*
+            //private Dictionary<string, string> activeCommands;
+            //private Dictionary<string, string> activeNouns;
+            //activeCommands = new Dictionary<string, string>(CommandDictonary.GetCommandList()); 
+  
             Console.WriteLine(rawInput);
             Console.WriteLine("");
             foreach  (string w in cleanedInputTokens)

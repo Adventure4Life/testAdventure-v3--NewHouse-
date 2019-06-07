@@ -13,21 +13,22 @@ namespace testAdventure
         {
             Console.CursorVisible = false;
             Console.WriteLine("\n*** DEBUGGING - Press Any Key to Exit - DEBUGGING ***");
-            Console.ReadKey(true);
+            UserInput.AnyKeyContinue();
         }
 
         public static void TestSomething()
         {
+            Console.WriteLine(Player.PosX+", "+ Player.PosY);
             // Test AREA Data
-            Console.WriteLine(Level.GameWorld[2, 2].Name());
-            Console.WriteLine(Level.GameWorld[2, 2].LookDescription());
-            foreach (string line in Level.GameWorld[2, 2].Cinamatic())
+            Console.WriteLine(Level.GameWorld[Player.PosX, Player.PosY].Name());
+            Console.WriteLine(Level.GameWorld[Player.PosX, Player.PosY].LookDescription());
+            foreach (string line in Level.GameWorld[Player.PosX, Player.PosY].Cinamatic())
             {
                 Console.WriteLine(line);
             }
             // Test Items in Area
-            Console.WriteLine(" <Items> : " + Level.GameWorld[2, 2].ItemList().Count);
-            foreach (Items item in Level.GameWorld[2, 2].ItemList())
+            Console.WriteLine(" <Items> : " + Level.GameWorld[Player.PosX, Player.PosY].ItemList().Count);
+            foreach (Items item in Level.GameWorld[Player.PosX, Player.PosY].ItemList())
             {
                 Console.WriteLine("   " + item.name);
                 Console.WriteLine("     " + item.description_Default);
@@ -35,13 +36,13 @@ namespace testAdventure
                 Console.WriteLine("     " + item.getItem_Failed);
             }
             // Test Exits in Area
-            Console.WriteLine(" <Exits> : " + Level.GameWorld[2, 2].ExitList().Count);
-            foreach (Exit exit in Level.GameWorld[2, 2].ExitList())
+            Console.WriteLine(" <Exits> : " + Level.GameWorld[Player.PosX, Player.PosY].ExitList().Count);
+            foreach (Exit exit in Level.GameWorld[Player.PosX, Player.PosY].ExitList())
             {
                 Console.WriteLine("   " + exit.name);
                 Console.WriteLine("     " + exit.open);
-                Console.WriteLine("     " + exit.look_at_open);
-                Console.WriteLine("     " + exit.look_area_open);
+                Console.WriteLine("     " + exit.look_at_exit);
+                Console.WriteLine("     " + exit.move_Through_exit);
             }
 
             // TEST Command Import

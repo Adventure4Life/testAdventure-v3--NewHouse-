@@ -1,0 +1,56 @@
+//--AREA_NAME: <Area 1,1 (Starting Spawn)>
+
+//--AREA_LOOK: <Look Area 1,1 (Starting Spawn) This is the start room. The North and West Exits are open, while the East Exit is a locked door. There is no exit to the south.>
+
+//--AREA_CINAMATIC_START:
+<Cinimatic 1,1 (Starting Spawn)>
+//--AREA_CINAMATIC_END:
+
+//LIST_OF_ITEMS_IN_AREA--START
+SilverBall
+RedBox
+//LIST_OF_ITEMS_IN_AREA--END
+
+//-EXIT_START
+--NAME: North Exit
+--DIRECTION: north
+
+--AVAILABLE: true
+--IS_OPEN: true
+
+--LOOK_AT_EXIT: <exit description>
+--Move_Through_Exit: <you exit the area>
+//-EXIT_END
+
+//-EXIT_START
+--NAME: South Exit
+--DIRECTION: south
+
+--AVAILABLE: false
+--IS_OPEN: false
+
+--LOOK_AT_EXIT: There is no exit to the
+--Move_Through_Exit: <you exit the area>
+//-EXIT_END
+
+//-EXIT_START
+--NAME: East Exit
+--DIRECTION: east
+
+--AVAILABLE: true
+--IS_OPEN: false
+
+--LOOK_AT_EXIT: The door to the east is locked.
+--Move_Through_Exit: You can not go that way until you unlock the door!
+//-EXIT_END
+
+//-EXIT_START
+--NAME: West Exit
+--DIRECTION: west
+
+--AVAILABLE: true
+--IS_OPEN: true
+
+--LOOK_AT_EXIT: <exit description>
+--Move_Through_Exit: <you exit the area>
+//-EXIT_END

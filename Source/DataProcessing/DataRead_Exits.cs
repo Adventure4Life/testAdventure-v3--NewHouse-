@@ -9,17 +9,13 @@ namespace testAdventure
     class ExitKeys
     {
         public string name { get; } = "--NAME:";
+        public string direction { get; } = "--DIRECTION:";
+
+        public string avaliable { get; } = "--AVAILABLE:";
         public string isOpen { get; } = "--IS_OPEN:";
 
-        public string lookAreaOpen { get; } = "--LOOK_AREA_OPEN:";
-        public string lookAreaClosed { get; } = "--LOOK_AREA_CLOSED:";
-
-        public string LookAtOpen { get; } = "--LOOK_AT_OPEN:";
-        public string LookAtClosed { get; } = "--LOOK_AT_CLOSED:";
-
-        public string Use_Open { get; } = "--USE_OPEN:";
-        public string Use_CLosed { get; } = "--USE_CLOSED:";
-
+        public string lookAtExit { get; } = "--LOOK_AT_EXIT:";
+        public string MoveThroughExit { get; } = "--Move_Through_Exit:";
     }
 
     class DataRead_Exits
@@ -32,9 +28,13 @@ namespace testAdventure
             for (int i = start; i < end; i++)
             {
                 exit.name = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.name, fileData, start, end);
+                exit.direction = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.direction, fileData, start, end);
+
+                exit.avaliable = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.avaliable, fileData, start, end).Equals("true");
                 exit.open = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.isOpen, fileData, start, end).Equals("true");
-                exit.look_area_open = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.lookAreaOpen, fileData, start, end);
-                exit.look_at_open = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.LookAtOpen, fileData, start, end);
+
+                exit.look_at_exit = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.lookAtExit, fileData, start, end);
+                exit.move_Through_exit = ReadDataFile.ReadData_LinesInsideBrackets(exitKeys.MoveThroughExit, fileData, start, end);
             }
             return exit;
         }

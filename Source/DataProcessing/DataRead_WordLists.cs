@@ -100,7 +100,11 @@ namespace testAdventure
             AddSafe(CmdList, value, value);
             foreach (string synonym in keys)
             {
+                #region Test Prints
                 //Console.WriteLine(value + ", " + synonym);
+                //AddSafe(CmdList, TextUtils.StemWord.Stem(synonym).Value, value);
+                //string StemValue = TextUtils.StemWord.Stem("looking").Value;
+                #endregion
                 AddSafe(CmdList, synonym, value);
             }
             #region - DEBUG - Test print some variables
@@ -116,51 +120,55 @@ namespace testAdventure
             #endregion
         }
 
-        /*
-
-            string value = ReadDataFile.Read_RawSingleLine(cmdKeys.cmdName, fileDataList);
-            int[] brackest = ReadDataFile.FindUniqueBrackets(cmdKeys.cmdSingleList_Start, cmdKeys.cmdSingleList_End, fileDataList);
-            List<string> keys = ReadDataFile.Read_WordLists(brackest[0], brackest[1], fileDataList);
-
-            foreach (string line in keys)
-            {
-                Console.WriteLine(line);
-            }
-
-            keys = TextUtils.StemWordList(keys);
-            AddSafe(CmdList, value, value);
-            foreach (string synonym in keys)
-            {
-                Console.WriteLine(value+", "+keys);
-                //AddSafe(CmdList, synonym, value);
-            }
-        }*/
-
         public void AddSafe(Dictionary<string, string> dictionary, string key, string value)
         {
+            value = TextUtils.StemWord.Stem(value).Value;
+            key = TextUtils.StemWord.Stem(key).Value;
+            //Console.WriteLine(value);
             if (!dictionary.ContainsKey(key))
                 dictionary.Add(key, value);
         }
     }
 }
-    /*
-        private List<string> fileNameData;
-        private string filePath;
 
-        public DataRead_WordLists(string type)
-        {
-            filePath = type;
-            fileNameData = ReadDataFile.Load_DataFile(filePath, "_ListofWords");
-        }
+/*
 
-        public Dictionary<string, string> GetList()
-        {
-            Dictionary<string, string> ListofCommands = new Dictionary<string, string>();
-            List<string> fileNames = ReadDataFile.BetweenUniqueBrackets("//List-START", "/List-END");
+    string value = ReadDataFile.Read_RawSingleLine(cmdKeys.cmdName, fileDataList);
+    int[] brackest = ReadDataFile.FindUniqueBrackets(cmdKeys.cmdSingleList_Start, cmdKeys.cmdSingleList_End, fileDataList);
+    List<string> keys = ReadDataFile.Read_WordLists(brackest[0], brackest[1], fileDataList);
 
-            // - Load list of commands into list<string>, then use that to load command files like item files
-            return ListofCommands;
-        }
+    foreach (string line in keys)
+    {
+        Console.WriteLine(line);
+    }
+
+    keys = TextUtils.StemWordList(keys);
+    AddSafe(CmdList, value, value);
+    foreach (string synonym in keys)
+    {
+        Console.WriteLine(value+", "+keys);
+        //AddSafe(CmdList, synonym, value);
+    }
+}*/
+
+/*
+    private List<string> fileNameData;
+    private string filePath;
+
+    public DataRead_WordLists(string type)
+    {
+        filePath = type;
+        fileNameData = ReadDataFile.Load_DataFile(filePath, "_ListofWords");
+    }
+
+    public Dictionary<string, string> GetList()
+    {
+        Dictionary<string, string> ListofCommands = new Dictionary<string, string>();
+        List<string> fileNames = ReadDataFile.BetweenUniqueBrackets("//List-START", "/List-END");
+
+        // - Load list of commands into list<string>, then use that to load command files like item files
+        return ListofCommands;
+    }
 */
 
 

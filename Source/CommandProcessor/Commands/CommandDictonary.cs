@@ -16,6 +16,14 @@ namespace testAdventure
             DataReader readData = new DataReader();
             actionsSingle = readData.ImportCommands_Singles();
             actionsConstant = readData.ImportCommands_Constants();
+
+            foreach (KeyValuePair<string, string> item in CommandDictonary.actionsConstant)
+            {
+                //Console.WriteLine("{0} : {1}", item.Key, item.Value);
+                actionsSingle.Add(item.Key, item.Value);
+            }
+
+
         }
     }
 }

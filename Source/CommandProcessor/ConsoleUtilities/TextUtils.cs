@@ -9,7 +9,7 @@ namespace testAdventure
 {
     static class TextUtils
     {
-       static EnglishPorter2Stemmer StemWord = new EnglishPorter2Stemmer();
+       static public EnglishPorter2Stemmer StemWord = new EnglishPorter2Stemmer();
 
         #region Tokenisarion - CleanWord - Stemming
         public static string[] TokenizeStringList (string input)
